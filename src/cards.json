@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "clicked": false,
+        "name": "test"
+
+    },
+    {
+        "id": 2,
+        "clicked":false,
+        "name":"test2"
+    },
+    {
+        "id": 3,
+        "clicked":false,
+        "name":"test3"
+    },
+    {
+        "id": 4,
+        "clicked":false,
+        "name":"test4"
+    }
+]

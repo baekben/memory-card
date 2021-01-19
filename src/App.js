@@ -66,10 +66,6 @@ function App() {
 						<div>
 							High Score: <span>{highScore}</span>
 						</div>
-						<div>
-							<button onClick={countScore}>Count</button>
-							<button onClick={newHigh}>New High</button>
-						</div>
 					</div>
 
 					<div>

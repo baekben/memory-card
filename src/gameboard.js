@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from './card';
-import cards from './cards.json';
+import Data from './data.js';
 
 export default function Gameboard(props) {
 	const { score, gamemaster, highScore } = props;
@@ -9,20 +9,20 @@ export default function Gameboard(props) {
 	useEffect(() => {
 		const randCards = () => {
 			let boardValid = false;
-			let cardAmount = cards.length;
+			let cardAmount = Data.cards.length;
 			let currentBoard = [];
 			for (let i = 0; i < 3; i++) {
 				var randNum = Math.floor(Math.random() * cardAmount);
-				while (currentBoard.includes(cards[randNum])) {
+				while (currentBoard.includes(Data.cards[randNum])) {
 					randNum = Math.floor(Math.random() * cardAmount);
 				}
-				if (cards[randNum] !== currentBoard[randNum]) {
+				if (Data.cards[randNum] !== currentBoard[randNum]) {
 					boardValid = true;
 				}
-				if (!cards[randNum].clicked) {
+				if (!Data.cards[randNum].clicked) {
 					boardValid = true;
 				}
-				currentBoard = [...currentBoard, cards[randNum]];
+				currentBoard = [...currentBoard, Data.cards[randNum]];
 			}
 			if (boardValid) {
 				boardValid = false;
@@ -42,7 +42,13 @@ export default function Gameboard(props) {
 			Gameboard
 			<div className="row" id="cards">
 				{board.map((card) => (
-					<Card id={card.id} name={card.name} key={card.id} gamemaster={gamemaster} />
+					<Card
+						id={card.id}
+						name={card.name}
+						key={card.id}
+						img={card.img}
+						gamemaster={gamemaster}
+					/>
 				))}
 			</div>
 		</div>

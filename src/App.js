@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from './header';
 import Gameboard from './gameboard';
-import cards from './cards.json';
+import Data from './data.js';
 function App() {
 	const [page, setPage] = useState('Home Page');
 	const [score, setScore] = useState(0);
@@ -32,7 +32,7 @@ function App() {
 	};
 
 	const resetBoard = () => {
-		cards.forEach((e) => {
+		Data.cards.forEach((e) => {
 			e.clicked = false;
 		});
 		setScore(0);
@@ -40,9 +40,9 @@ function App() {
 
 	const gamemaster = (e) => {
 		console.log(e);
-		if (!cards[e - 1].clicked) {
-			cards[e - 1].clicked = true;
-			console.log(cards);
+		if (!Data.cards[e - 1].clicked) {
+			Data.cards[e - 1].clicked = true;
+			console.log(Data.cards);
 			countScore();
 		} else {
 			console.log('lose');

@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
-import Scoreboard from './scoreboard';
+import Header from './header';
 import Gameboard from './gameboard';
-// import cards from './cards.json';
+import cards from './cards.json';
 function App() {
 	const [page, setPage] = useState('Home Page');
+	const [score, setScore] = useState(0);
+	const [highScore, setHighScore] = useState(0);
 
+	const countScore = () => {
+		setScore(score + 1);
+	};
+
+	const newHigh = () => {
+		if (score > highScore) {
+			setHighScore(score);
+		}
+		setScore(0);
+	};
 	const switchPage = (e) => {
 		const homeId = document.getElementById('homePage');
 		const aboutId = document.getElementById('aboutPage');
@@ -19,38 +31,53 @@ function App() {
 		}
 	};
 
+	const resetBoard = () => {
+		cards.forEach((e) => {
+			e.clicked = false;
+		});
+		setScore(0);
+	};
+
+	const gamemaster = (e) => {
+		console.log(e);
+		if (!cards[e - 1].clicked) {
+			cards[e - 1].clicked = true;
+			console.log(cards);
+			countScore();
+		} else {
+			console.log('lose');
+			newHigh();
+			resetBoard();
+		}
+	};
+
 	return (
 		<div className="App">
 			<header className="App-header">
-				<h1>Memory Card Game</h1>
+				<Header switchPage={switchPage} page={page} />
 			</header>
 			<div className="container">
 				<h2>Container</h2>
-				<div>
-					<h2>Menu: {page}</h2>
+				<div className="d-block" id="homePage">
 					<div>
-						<u id="home" onClick={(e) => switchPage(e.target.id)}>
-							Home
-						</u>
+						<div>
+							Score:<span>{score}</span>
+						</div>
+						<div>
+							High Score: <span>{highScore}</span>
+						</div>
+						<div>
+							<button onClick={countScore}>Count</button>
+							<button onClick={newHigh}>New High</button>
+						</div>
 					</div>
+
 					<div>
-						<u id="about" onClick={(e) => switchPage(e.target.id)}>
-							About
-						</u>
+						<Gameboard gamemaster={gamemaster} score={score} highScore={highScore} />
 					</div>
 				</div>
-				<div>
-					<div className="d-block" id="homePage">
-						<div>
-							<Scoreboard />
-						</div>
-						<div>
-							<Gameboard />
-						</div>
-					</div>
-					<div className="d-none" id="aboutPage">
-						<div>Text for about</div>
-					</div>
+				<div className="d-none" id="aboutPage">
+					<div>Text for about</div>
 				</div>
 			</div>
 		</div>

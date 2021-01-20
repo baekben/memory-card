@@ -39,7 +39,6 @@ export default function Gameboard(props) {
 
 	return (
 		<div>
-			Gameboard
 			<div className="row" id="cards">
 				{board.map((card) => (
 					<Card

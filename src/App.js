@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './header';
 import Gameboard from './gameboard';
 import Data from './data.js';
+import './App.css';
 function App() {
 	const [page, setPage] = useState('Home Page');
 	const [score, setScore] = useState(0);
@@ -52,20 +53,14 @@ function App() {
 	};
 
 	return (
-		<div className="App">
-			<header className="App-header">
-				<Header switchPage={switchPage} page={page} />
-			</header>
+		<div className="justify-content-center App">
+			<Header switchPage={switchPage} page={page} />
+
 			<div className="container">
-				<h2>Container</h2>
 				<div className="d-block" id="homePage">
-					<div>
-						<div>
-							Score:<span>{score}</span>
-						</div>
-						<div>
-							High Score: <span>{highScore}</span>
-						</div>
+					<div id="scoreboard" className="row user-select-none justify-content-md-center">
+						<p className="col-sm-2">Score:{score}</p>
+						<p className="col-sm-2">High Score: {highScore}</p>
 					</div>
 
 					<div>
@@ -73,7 +68,19 @@ function App() {
 					</div>
 				</div>
 				<div className="d-none" id="aboutPage">
-					<div>Text for about</div>
+					<div>
+						<h3>About</h3>
+						<p>- Developed by Ben Baek while learning about web development</p>
+					</div>
+					<div>
+						<h3>How To Play</h3>
+						<p>
+							- This application puts your memory to the test. You are presented with multiple
+							images of celebrities. The images get shuffled every-time they are clicked. You CAN
+							NOT click on any image more than once or else your score resets to zero. The main
+							objective is to get the highest score as possible.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>

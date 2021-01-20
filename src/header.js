@@ -4,20 +4,18 @@ export default function Headers(props) {
 	const { page, switchPage } = props;
 
 	return (
-		<div>
+		<header className=" App-header" id={page}>
 			<h1>Memory Card Game</h1>
 
-			<h2>Menu: {page}</h2>
-			<div>
-				<u id="home" onClick={(e) => switchPage(e.target.id)}>
+			<div className="row justify-content-md-center" id="menu">
+				<button className="btn col-sm-2" id="home" onClick={(e) => switchPage(e.target.id)}>
 					Home
-				</u>
-			</div>
-			<div>
-				<u id="about" onClick={(e) => switchPage(e.target.id)}>
+				</button>
+				<button className="btn col-sm-2" id="about" onClick={(e) => switchPage(e.target.id)}>
 					About
-				</u>
+				</button>
 			</div>
-		</div>
+			<div id="col menu"></div>
+		</header>
 	);
 }

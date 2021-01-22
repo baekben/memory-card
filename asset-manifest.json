@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.ccf8bd5d.chunk.css",
+    "main.js": "/memory-card/static/js/main.80877ee8.chunk.js",
+    "main.js.map": "/memory-card/static/js/main.80877ee8.chunk.js.map",
+    "runtime-main.js": "/memory-card/static/js/runtime-main.e60de1de.js",
+    "runtime-main.js.map": "/memory-card/static/js/runtime-main.e60de1de.js.map",
+    "static/js/2.963d61d7.chunk.js": "/memory-card/static/js/2.963d61d7.chunk.js",
+    "static/js/2.963d61d7.chunk.js.map": "/memory-card/static/js/2.963d61d7.chunk.js.map",
+    "index.html": "/memory-card/index.html",
+    "static/css/main.ccf8bd5d.chunk.css.map": "/memory-card/static/css/main.ccf8bd5d.chunk.css.map",
+    "static/js/2.963d61d7.chunk.js.LICENSE.txt": "/memory-card/static/js/2.963d61d7.chunk.js.LICENSE.txt",
+    "static/media/butler.20090675.jpg": "/memory-card/static/media/butler.20090675.jpg",
+    "static/media/App.css": "/memory-card/static/media/court.df7631f2.jpg",
+    "static/media/davis.fe5c1cac.jpg": "/memory-card/static/media/davis.fe5c1cac.jpg",
+    "static/media/doncic.f08b5193.jpg": "/memory-card/static/media/doncic.f08b5193.jpg",
+    "static/media/durant.a68b5754.jpg": "/memory-card/static/media/durant.a68b5754.jpg",
+    "static/media/harden.a4f9f998.jpg": "/memory-card/static/media/harden.a4f9f998.jpg",
+    "static/media/jaysonTatum.d172e0c9.jpg": "/memory-card/static/media/jaysonTatum.d172e0c9.jpg",
+    "static/media/jokic.1b4ccf6c.jpg": "/memory-card/static/media/jokic.1b4ccf6c.jpg",
+    "static/media/jordan.cf74caca.jpg": "/memory-card/static/media/jordan.cf74caca.jpg",
+    "static/media/kawhi.358ecbe5.jpg": "/memory-card/static/media/kawhi.358ecbe5.jpg",
+    "static/media/klay.44ed3cac.jpg": "/memory-card/static/media/klay.44ed3cac.jpg",
+    "static/media/kobeBryant.cc1c966b.jpg": "/memory-card/static/media/kobeBryant.cc1c966b.jpg",
+    "static/media/lebronJames.e79f2987.jpg": "/memory-card/static/media/lebronJames.e79f2987.jpg",
+    "static/media/shaq.acd2a160.jpg": "/memory-card/static/media/shaq.acd2a160.jpg",
+    "static/media/stephCurry.1b889f20.jpg": "/memory-card/static/media/stephCurry.1b889f20.jpg",
+    "static/media/traeYoung.6ff475ad.jpg": "/memory-card/static/media/traeYoung.6ff475ad.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e60de1de.js",
+    "static/js/2.963d61d7.chunk.js",
+    "static/css/main.ccf8bd5d.chunk.css",
+    "static/js/main.80877ee8.chunk.js"
+  ]
+}

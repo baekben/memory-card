@@ -1,17 +1,30 @@
 body{
     font-family: 'Fraunces', serif;
+    background-image: url("/src/img/court.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header{
     padding: 20px;
     width: 100%;
     text-align: center;
-    border-bottom: 2px black solid;
+    background-color:rgba(0,0,0,0.7);
+    color: white;
 }
 
 
 .container{
     width: 100%;
+}
+
+.card{
+    background-color: inherit;
+}
+
+#scoreboard{
+    background-color: rgba(0,0,0,0.7);
+    color: white;
 }
 
 img{
@@ -23,8 +36,14 @@ img{
     aspect-ratio: 4/3;
     object-fit: cover;
     display: inline-block;
-    border: 2px gold solid;
+    border: 5px gold solid;
     border-radius: 10px;
+}
+
+#cardName{
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    border-radius: 12px;
 }
 
 .container{
@@ -32,8 +51,13 @@ img{
 }
 
 button{
-    border: 0;
-    
+    border: none;  
+}
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
 }
 
 

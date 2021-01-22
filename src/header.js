@@ -7,7 +7,7 @@ export default function Headers(props) {
 		<header className="justify-content-center App-header" id={page}>
 			<h1>Memory Card Game</h1>
 
-			<div className="btn-group btn-group-toggle row justify-content-md-center" id="menu">
+			<div className="row justify-content-md-center" id="menu">
 				<button
 					className="btn btn-secondary col-sm-3 active"
 					id="home"
